@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    color: #EAEAEA;
     font-family: 'Neo Sans Pro';
 }
 
@@ -89,7 +90,6 @@ p {
     margin-left: 88px;
     margin-right: 90px;
     z-index: 1;
-    transition: opacity 1s;
 }
 
 .header-center-text {
@@ -112,6 +112,7 @@ p {
     height: 50px;
     width: 178px;
     background: #FFED00;
+    color: #1F1F1F;
     border-radius: 5px;
     font-style: normal;
     font-weight: 700;
@@ -123,4 +124,35 @@ p {
 
 .button-header:active {
     box-shadow: inset 0px 0px 5px 5px #dbcf23;
+}
+
+.header-bottom-obert {
+    height: 57px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #0D0D0D;
+}
+
+.headre-bottom {
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.header-bottom-text {
+    font-style: normal;
+    font-weight: 500;
+    margin-right: 60px;
+    font-size: 16px;
+    line-height: 17px;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.header-bottom-text:hover {
+    color: #FFED00;
 }
