@@ -3,11 +3,11 @@
     margin: 0;
     color: #EAEAEA;
     font-family: "Neo Sans Pro Cyr";
-    
 }
 
 p {
     color: #EAEAEA;
+    font-size: 14px;
 }
 
 body {
@@ -16,7 +16,7 @@ body {
 
 .maingrid {
     display: grid;
-    grid-template-columns: repeat(12, 1f);
+    grid-template-columns: repeat(12, 1fr);
     grid-auto-rows: auto;
     grid-auto-columns: auto;
     grid-gap: 0;
@@ -34,6 +34,7 @@ body {
     h - center-header
     hl - lower heaer (bottom header)
     S - slider
+    ats - about-the-command (о комманде проекта)
 */
 
 .maingrid > div {
@@ -44,7 +45,6 @@ body {
     grid-area: H;
     background-color: #232323;
     height: 66px;
-    width: auto;
 }
 
 .maingrid > div.center-header {
@@ -59,6 +59,9 @@ body {
     background-color: #0D0D0D;
     height: 57px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 /* slider */
 .maingrid > div.slider {
@@ -74,13 +77,16 @@ body {
 .top-header-inside {
     margin-left: 20%;
     margin-right: 20%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 .top-header-text {
     color: #8D8D8D;
+    font-size: 12px;
 }
 
 .block-1 {
@@ -93,7 +99,6 @@ body {
 .block-2 {
     display: flex;
     flex-direction: row;
-    align-items: center;
 }
 
 .block {
@@ -105,6 +110,7 @@ body {
 /* header center */
 
 .header-center {
+    height: 100%;
     margin-left: 20%;
     margin-right: 20%;
     display: flex;
@@ -164,28 +170,24 @@ body {
 }
 
 .button-header:active {
-    box-shadow: inset 0px 0px 5px 5px #dbcf23;
+    box-shadow: inset 0px 0px 5px 5px #1e1e1e;
 }
 
-/* buttom-header */
+/* bottom-header */
 
 .headre-bottom {
     margin-left: 20%;
     margin-right: 20%;
     width: 65%;
     display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
+    text-align: center;
 }
 
 .header-bottom-text {
     font-style: normal;
     font-weight: 500;
-    margin-right: 60px;
-    font-size: 16px;
-    line-height: 17px;
-    align-items: center;
+    font-size: 14px;
+    margin-right: 5%;
     transition: 0.3s;
 }
 
@@ -199,12 +201,92 @@ body {
     height: 425px;
     margin-left: 20%;
     margin-right: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 100%;
+}
+
+.button-and-text {
+    width: 30%;
+    height: 100%;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.slider-title-text {
+    width: 444px;
+    height: 97px;
+    color: #1f1f1f;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.slider-title-text::after {
+    content: "“Level UP”";
+    margin-top: 20px;
+    display: block;
+    right: 0;
+    bottom: -3px;
+    color: #1f1f1f;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+}
+
+.image {
+    width: 581px;
+    height: 425px;
+    background-image: url(/materials/slider/image_lamp.png);
 }
 
 /* from command style */
 
+.title-team-countainer {
+    width: 472px;
+    height: 58px;
+    font-style: normal;
+    font-weight: 500;
+}
+
 .about-the-command {
-    width: 65%;
-    height: 425px;
+    margin-top: 101px;
+    grid-area: ats;
+    margin-left: 20%;
+    margin-right: 20%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 377px);
+    grid-template-rows: repeat(3, 90px);
+}
+
+.text-block {
+    grid-column: 1/4;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: start;
+}
+
+.info-block {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #232323;
+    border-radius: 5px;
+}
+
+.block-image {
+    margin: auto;
+    width: 57px;
+    height: 57px;
+    background-color: #FFED00;
 }
